@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Bug Bounty</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+             .bounty-fields {
+             border: 2px solid #004650;
+             background-color: #406BE8;
+             margin: 4px; padding: 10px;
+             }
+             .fieldlabels {
+             font-size: 14px;
+             font-family: Helvetica;
+             color: #000000;
+             font-weight:700;
+             }
+             .input-fields {
+             font-size: 14px;
+             font-family: Helvetica;
+             width: 80px;
+             }
+             .names {
+             font-size: 12px;
+             font-family: Helvetica;
+             }
+             .ui-menu {
+             font-family: Helvetica;
+             font-size: 12px;
+             margin: 2px;
+             background-color: #ffffff;
+             color: #406BE8;
+             padding: 4px;
+             font-weight:450;
+
+             }
+             .ui-autocomplete {
+             max-height: 200px;
+             overflow-y: scroll;
+             }
+             .button {
+             font-size:12px;
+             color:#ffffff;
+             background-color:#406BE8;
+             margin-left:45%;
+             width:80px;
+             height:40px;
+             font-weight:600;
+             border-radius: 30px;
+             }
+         </style>
+         <base target="_top">
+   </head>
+   <body style="background-color: #ffffff;">
+       <img src="https://bugbounty.sa/static/media/logo-colored-bugbounty.a9cce361.svg" align="right" height="90" width="90">
+       <br><br><br><br>
+
+           <form id="add-record-form">
+               <label class="fieldlabels">Name</label>
+               <div class="bounty-fields">
+                   <input type="text" class="names" id="tags" size="35" required/>
+               </div>
+
+               <label class="fieldlabels">Bounty</label>
+
+               <div class="bounty-fields">
+                   <select  class="names ui-menu" id ="bounty-options" style="width:480px; height:30px;"><option>Enter the option</option>
+                   </select>
+
+               <label id="points-display"></label>
+               </div>
+
+               <label class="fieldlabels">Points</label>
+
+               <div class="bounty-fields">
+                   <input type="text" class="names" id="bounty-points" size="3" maxlength="4" required/>
+
+                   <label id="bounty-value"></label>
+               </div>
+
+               <label class="fieldlabels">Description</label>
+
+               <div class="bounty-fields">
+                   <textarea class="names" id="bounty-description" cols="80" rows="10" required></textarea>
+               </div>
+
+               <div class="block"><br>
+                   <button type="submit" class="button">SUBMIT</button>
+               </div>
+           </form>
+   </body>
+</html>
